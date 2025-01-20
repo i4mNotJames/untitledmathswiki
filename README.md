@@ -1,12 +1,14 @@
 # untitledmathswiki
-Pre-pre alpha VER 0.4
+Pre alpha VER 0.4
+Originally made as a project for coding class, now expanded into a full wiki project.
+Still in heavy development. Please don't expect a perfect website
 
-## TO DOWNLOAD:
-Download the entire repository as a .zip file. To open, open index.html.
+## Current Status:
+- Pages: In development
+- Search Engine: Done
+- CSS: In progress
+- Interactive stuff: TBA
+- Page editor: TBA
 
 ## CONTRIBUTE:
 We'd love you to make articles for us, please contribute to the wiki! You can use the placeholder in 'wiki' to get started.
-
-
-
-UNLICENSED as of 8 Jan, 2025. Please don't copy.!
