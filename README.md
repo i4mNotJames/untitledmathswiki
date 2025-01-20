@@ -1,7 +1,5 @@
 # untitledmathswiki
-Pre alpha VER 0.4
-Originally made as a project for coding class, now expanded into a full wiki project.
-Still in heavy development. Please don't expect a perfect website
+Pre alpha VER 0.4. Originally made as a project for coding class, now expanded into a full wiki project. Still in heavy development. Please don't expect a perfect website
 
 ## Current Status:
 - Pages: In development
