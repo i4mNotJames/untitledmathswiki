@@ -1,5 +1,6 @@
 body {
     background-image: linear-gradient(to bottom left, white, #defdff);
+    font-family: century-gothic, monospace;
 }
 .article-preview {
     width: 40%;
