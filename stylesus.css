@@ -1,0 +1,23 @@
+body {
+    background-image: linear-gradient(to bottom left, white, #defdff);
+}
+.article-preview {
+    width: 40%;
+    border: solid 2px;
+    padding: 10px;
+}
+.article-pack {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+h1 {
+    text-align: center;
+}
+.titlesub {
+    text-align: center;
+}
+.search {
+    width: 100%;
+    align-content: space-between;
+}

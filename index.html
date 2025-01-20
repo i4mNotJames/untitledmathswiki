@@ -1,0 +1,61 @@
+<html lang="en">
+    <head>
+        <title>untitled maths wiki</title>
+        <link rel='stylesheet' href='stylesus.css'>
+    </head>
+    <body>
+        <!-- MAIN PAGE -->
+        <h1>Untitled Maths Wiki</h1>
+        <h2 id='titlesub' class='titlesub'>
+            <!-- If Javascript is disabled, this will show up. -->
+            this website uses javascript to function, please turn it on or switch browsers if it's already on.
+        </h2>
+        <div class='search'>
+            <input id='search' type='search'>
+            <button onclick="searchSomething();">Search</button>
+        </div>
+        <a href='wiki/placeholder.html'>Page Template</a>
+        <p>Some Random Pages:</p>
+        <div class='article-pack'>
+            <div class='article-preview'>
+                <h2><a href="wiki/integers.html">Integers</a></h2>
+                <p>Integers is a term for any numbers between infinity and negative infinity that are a <u>whole number</u>. It can be represented using the symbol ℤ.</p>
+            </div>
+            <div class='article-preview'>
+                <h2>Hmm, not sure.</h2>
+                <p>Hey. If you're seeing this, we couldn't find a page to put here. Yeah, it's kinda hard searching through all the htmls. Try refreshing or enabling your JavaScript if it's off.</p>
+            </div>
+        </div>
+        <h2>About us:</h2>
+        <p>untitled maths wiki is a free wiki service that students can use to learn complex maths topics for free on the web.</p>
+        
+        <h2>Credits:</h2>
+        <ul>
+            <li>James McCormick - Lead Developer, Writer, JavaScript Developer</li>
+            <li>Will Bedford - CSS developer</li>
+            <li>Ryan Brady - Writer, HTML Developer</li>
+        </ul>
+        <script>
+            // Handles the subtitle text
+            const messages = [
+                "The best way to study! Well, not really practical, but still!",
+                "The best way to cheat in- i mean study for exams!",
+                "The 'greatest' learning tool!",
+                "We're still in development, what are you doing here?",
+                "What did you expect, a fancy Wikipedia-like website?",
+                "No, you can't add/edit pages.",
+                "In <a href='wiki/algebra.html'>algebra<a> we trust",
+                "Skibidi toilet isn't funny.",
+                "man i just love <a href='https://www.youtube.com/watch?v=B1J6Ou4q8vE'>animation vs math</a>",
+                "We make pages in three languages: English, Brainrot, and Yappanese.",
+                "The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start."
+            ];
+            const random = Math.floor(Math.random() * messages.length);
+            document.getElementById("titlesub").innerHTML = messages[random];
+            function searchSomething() { // SEARCH SYSTEM
+                var q = document.getElementById("search").value;
+                window.location.replace("search.html?q=" + encodeURIComponent(q));
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title id='actualtitle'>Something - untitled maths wiki</title>
+        <link rel='stylesheet' href='stylesus.css'>
+    </head>
+    <body>
+        <h1 id='title'>SEARCHING FOR 'SOMETHING'</h1>
+        <input id='search' type='search' placeholder="or search something else">
+        <button onclick="searchSomething();">Search</button>
+        <div class='article-pack'>
+            <div class='article-preview' id="article1">
+                <h2 id='header1'>Hmm, not sure.</h2>
+                <p id='p1'>Hey. If you're seeing this, we couldn't find a page to put here. Yeah, it's kinda hard searching through all the htmls. Try refreshing or enabling your JavaScript if it's off.</p>
+            </div>
+            <div class='article-preview' id="article2">
+                <h2 id='header2'>Hmm, not sure.</h2>
+                <p id='p2'>Hey. If you're seeing this, we couldn't find a page to put here. Yeah, it's kinda hard searching through all the htmls. Try refreshing or enabling your JavaScript if it's off.</p>
+            </div>
+            <div class='article-preview' id="article3">
+                <h2 id='header3'>Hmm, not sure.</h2>
+                <p id='p3'>Hey. If you're seeing this, we couldn't find a page to put here. Yeah, it's kinda hard searching through all the htmls. Try refreshing or enabling your JavaScript if it's off.</p>
+            </div>
+            <div class='article-preview' id="article4">
+                <h2 id='header4'>Hmm, not sure.</h2>
+                <p id='p4'>Hey. If you're seeing this, we couldn't find a page to put here. Yeah, it's kinda hard searching through all the htmls. Try refreshing or enabling your JavaScript if it's off.</p>
+            </div>
+            <div class='article-preview' id="article5">
+                <h2 id='header5'>Hmm, not sure.</h2>
+                <p id='p5'>Hey. If you're seeing this, we couldn't find a page to put here. Yeah, it's kinda hard searching through all the htmls. Try refreshing or enabling your JavaScript if it's off.</p>
+            </div>
+            <div class='article-preview' id="article6">
+                <h2 id='header6'>Hmm, not sure.</h2>
+                <p id='p6'>Hey. If you're seeing this, we couldn't find a page to put here. Yeah, it's kinda hard searching through all the htmls. Try refreshing or enabling your JavaScript if it's off.</p>
+            </div>
+        </div>
+        <a href='index.html'>Homepage</a>
+        <script>
+            const search = new URL(window.location.href).searchParams;
+            document.getElementById("actualtitle").textContent = search.get("q") + ' - untitled maths wiki';
+            const query = search.get("q");
+             document.getElementById("title").textContent = "SEARCHING FOR '" + query + "'";
+            function searchSomething() { // SEARCH BAR
+                var q = document.getElementById("search").value;
+                window.location.replace("search.html?q=" + encodeURIComponent(q));
+            };
+            const data = [
+                {
+                    "name": "Placeholder",
+                    "preview": "Oh hey. This is a placeholder page. Here, you can yap about whatever maths thing you want, however you want."
+                },
+                {
+                    "name": "Addition",
+                    "preview": "Addition is the simplest form of increasing numbers. To     perform it on example numbers a and b, you simply count in 1s, starting from a, b times."
+                },
+                {
+                    "name": "Algebra",
+                    "preview": "Algebra is one of the deepest topics in maths so we'll start with just the basics. In the simplest terms algebra is 'subbing out' symbols such as 'x' with numbers."
+                },
+                {
+                    "name": "Integers",
+                    "preview": "Integers is a term for any numbers between infinity and negative infinity that are a <u>whole number</u>. It can be represented using the symbol ℤ."
+                },
+                {
+                    "name": "Subtraction",
+                    "preview": "TBA"
+                }
+            ];
+            var dividx = 0;
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].name.includes(query)) {
+                    dividx = dividx + 1;
+                    document.getElementById('header' + dividx).innerHTML = "<a href='wiki/" + data[i].name + ".html'>" + data[i].name + '</a>';
+                    document.getElementById('p' + dividx).innerHTML = data[i].preview;
+                    console.log(data[i]);
+                };
+            }
+        </script>
+    </body>
+</html>
