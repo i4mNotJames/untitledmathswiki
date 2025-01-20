@@ -1,0 +1,2 @@
+# untitledmathswiki
+idk bro.
