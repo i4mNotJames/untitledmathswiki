@@ -2,10 +2,7 @@
 Pre-pre alpha VER 0.4
 
 ## TO DOWNLOAD:
-Download the FOLDER, not the contents. It should be a .zip. Extract it wherever you want.
-
-## TO LAUNCH:
-Open the index.html in the folder.
+Download the entire repository as a .zip file. To open, open main/index.html.
 
 ## CONTRIBUTE:
 We'd love you to make articles for us, please contribute to the wiki! You can use the placeholder in 'wiki' to get started.
