@@ -17,13 +17,14 @@
         <a href='wiki/placeholder.html'>Page Template</a>
         <p>Some Random Pages:</p>
         <div class='article-pack'>
-            <div class='article-preview'>
-                <h2><a href="wiki/integers.html">Integers</a></h2>
-                <p>Integers is a term for any numbers between infinity and negative infinity that are a <u>whole number</u>. It can be represented using the symbol ℤ.</p>
+            <div class='article-preview>
+                <h2 id='a1h'><a href="wiki/integers.html">Integers</a></h2>
+                <p id='a1p'>Integers is a term for any numbers between infinity and negative infinity that are a <u>whole number</u>. It can be represented using the symbol ℤ.</p>
             </div>
             <div class='article-preview'>
-                <h2>Hmm, not sure.</h2>
-                <p>Hey. If you're seeing this, we couldn't find a page to put here. Yeah, it's kinda hard searching through all the htmls. Try refreshing or enabling your JavaScript if it's off.</p>
+                <h2 id='a2h'>Hmm, not sure.</h2>
+                
+                <p id='a2p'>Hey. If you're seeing this, we couldn't find a page to put here. Yeah, it's kinda hard searching through all the htmls. Try refreshing or enabling your JavaScript if it's off.</p>
             </div>
         </div>
         <h2>About us:</h2>
@@ -52,6 +53,34 @@
             ];
             const random = Math.floor(Math.random() * messages.length);
             document.getElementById("titlesub").innerHTML = messages[random];
+            const data = [
+                {
+                    "name": "Placeholder",
+                    "preview": "Oh hey. This is a placeholder page. Here, you can yap about whatever maths thing you want, however you want."
+                },
+                {
+                    "name": "Addition",
+                    "preview": "Addition is the simplest form of increasing numbers. To     perform it on example numbers a and b, you simply count in 1s, starting from a, b times."
+                },
+                {
+                    "name": "Algebra",
+                    "preview": "Algebra is one of the deepest topics in maths so we'll start with just the basics. In the simplest terms algebra is 'subbing out' symbols such as 'x' with numbers."
+                },
+                {
+                    "name": "Integers",
+                    "preview": "Integers is a term for any numbers between infinity and negative infinity that are a <u>whole number</u>. It can be represented using the symbol ℤ."
+                },
+                {
+                    "name": "Subtraction",
+                    "preview": "TBA"
+                }
+            ];
+            var art1 = math.random(1, data.length);
+            var art2 = math.random(1, data.length);
+            document.getElementById("a1h").value = "<a href='" + data[art1].name.toLowerCase() ".html'>" + data[art1].name + "</a>";
+            document.getElementById("a1p").value = data[art1].preview;
+            document.getElementById("a2h").value = "<a href='" + data[art2].name.toLowerCase() ".html'>" + data[art2].name + "</a>";
+            document.getElementById("a2p").value = data[art2].preview;
             function searchSomething() { // SEARCH SYSTEM
                 var q = document.getElementById("search").value;
                 window.location.replace("search.html?q=" + encodeURIComponent(q));
